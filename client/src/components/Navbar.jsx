@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import { menuLinks, assets } from '../../src/assets/assets.js'
 import { Link } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({ setShowLogin }) => {
 
   const [open, setOpen] = useState(true);
+
   return (
     <div className={`relative max-sm:px-0 max-sm:items-start flex justify-between items-center px-20 py-4 border-b border-gray-300 overflow-x-hidden`}>
 
@@ -22,14 +23,12 @@ const Navbar = () => {
           <input type="text" className='border rounded-2xl px-3 py-1 outline-none' placeholder='Search cars' />
         </div>}
         <Link>List cars</Link>
-        <Link to='/login'>
-          <button className='cursor-pointer px-6 py-1 text-white bg-blue-600 rounded-xl '>Login</button>
-        </Link>
+        <button onClick={() => setShowLogin(true)} className='cursor-pointer px-6 py-1 text-white bg-blue-600 rounded-xl '>Login</button>
       </div>
 
       {/* Menu button */}
       <button className={`mx-3 sm:hidden cursor-pointer`} onClick={() => setOpen(!open)}>
-          <img src={open? assets.close_icon: assets.menu_icon} alt="hello" />
+        <img src={open ? assets.close_icon : assets.menu_icon} alt="hello" />
       </button>
 
     </div>
