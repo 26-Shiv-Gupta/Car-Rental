@@ -15,13 +15,13 @@ const Hero = () => {
 
                 <form action="" className='flex px-12 py-6 rounded-full max-sm:rounded-3xl gap-12 shadow-2xl max-sm:flex-col'>
                     <div>
-                        <select name='location' value={location} onChange={(e) => setLocation(e.target.value)}>
+                        <select className='w-full outline-none' name='location' value={location} onChange={(e) => setLocation(e.target.value)}>
                             <option value="">Pick up Location</option>
                             {cityList.map((city, index) => (
                                 <option value={city} key={city}>{city}</option>
                             ))}
                         </select>
-                        <p>{location ? location : 'Pick up location'}</p>
+                        <p className='w-full pl-1'>{location ? location : 'Pick up location'}</p>
                     </div>
                     <div>
                         <p>Pick-up Date</p>
@@ -35,7 +35,7 @@ const Hero = () => {
                         <button className='px-6 bg-blue-600 py-2 rounded-full text-white cursor-pointer'>Search</button>
                     </div>
                 </form>
-
+                
                 <img src={assets.main_car} alt="main-car" />
             </div>
         </>

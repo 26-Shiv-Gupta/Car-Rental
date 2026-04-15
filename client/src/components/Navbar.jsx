@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Navbar = ({ setShowLogin }) => {
 
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   return (
     <div className={`relative max-sm:px-0 max-sm:items-start flex justify-between items-center px-20 py-4 border-b border-gray-300 overflow-x-hidden`}>
@@ -15,13 +15,12 @@ const Navbar = ({ setShowLogin }) => {
       </Link>
 
       {/* Home, Cars, Mybookings, search, List cars */}
-      <div className={`max-sm:fixed max-sm:top-13 flex items-center list-none gap-9 max-sm:h-screen max-sm:w-screen max-sm:flex-col max-sm:mt-2 max-sm:bg-amber-200 ${open ? 'max-sm:translate-x-0' : 'max-sm:translate-x-full transition-all duration-300'} `}>
+      <div className={`max-sm:fixed max-sm:top-15 flex items-center list-none gap-9 max-sm:h-screen max-sm:w-screen max-sm:flex-col max-sm:mt-2 max-sm:bg-white ${open ? 'max-sm:translate-x-0' : 'max-sm:translate-x-full'} transition-all duration-300 `}>
         {menuLinks.map((link, index) => (
           <Link key={index} to={link.path}>{link.name}</Link>
-        ))}
-        {!open && <div>
+        ))} <div className='max-sm:hidden'>
           <input type="text" className='border rounded-2xl px-3 py-1 outline-none' placeholder='Search cars' />
-        </div>}
+        </div>
         <Link>List cars</Link>
         <button onClick={() => setShowLogin(true)} className='cursor-pointer px-6 py-1 text-white bg-blue-600 rounded-xl '>Login</button>
       </div>
