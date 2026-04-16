@@ -1,4 +1,5 @@
 import React from 'react'
+import CarCard from './carCard'
 
 const FeaturedSection = () => {
   return (
@@ -9,7 +10,7 @@ const FeaturedSection = () => {
                 <h2 className='text-gray-500'>Explore our selection of premium vehicles available for your next adventure.</h2>
             </div>
             <div>
-                cars
+                <CarCard />
             </div>
             <div>
                 <button className='border py-1 px-6 rounded-xl border-gray-400'>Explore all Cars</button>
