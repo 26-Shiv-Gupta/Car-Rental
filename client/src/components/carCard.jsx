@@ -5,8 +5,8 @@ const CarCard = ({ car }) => {
 
 
     return (
-        <div className='max-w-75 shadow-xl rounded-2xl'>
-            <div className='relative'>
+        <div className='max-w-75 shadow-xl rounded-2xl card-hover-effect'>
+            <div className='w-full rounded-t-2xl relative overflow-hidden'>
                 <img className='rounded-t-2xl w-full' src={assets.car_image1} alt="car_image1" />
                 <div className='px-6 py-1 bg-blue-500 absolute top-2 left-2 rounded-2xl text-white'>
                     <p>Available</p>

@@ -5,3 +5,17 @@
     box-sizing: border-box;
     font-family: "Outfit", sans-serif;
 }
+
+.card-hover-effect:hover {
+    transform: translateY(-10px);
+}
+
+.card-hover-effect {
+    transition: all 0.5s ease;
+}
+.card-hover-effect img{
+    transition: all 0.5s ease;
+}
+.card-hover-effect:hover img {
+    transform: scale(110%);
+}

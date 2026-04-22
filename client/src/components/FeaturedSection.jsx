@@ -9,7 +9,12 @@ const FeaturedSection = () => {
                 <h1 className='text-5xl font-bold pb-2'>Featured Vehicles</h1>
                 <h2 className='text-gray-500'>Explore our selection of premium vehicles available for your next adventure.</h2>
             </div>
-            <div>
+            <div className='grid grid-cols-3 gap-5 my-10'>
+                <CarCard />
+                <CarCard />
+                <CarCard />
+                <CarCard />
+                <CarCard />
                 <CarCard />
             </div>
             <div>
